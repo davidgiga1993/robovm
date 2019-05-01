@@ -30,10 +30,10 @@ private_typedefs:
 enums:
     MIDINetworkConnectionPolicy: { first: MIDINetworkConnectionPolicy_NoOne, marshaler: ValuedEnum.AsMachineSizedUIntMarshaler }
     MIDIError: { first: kMIDIInvalidClient }
-    MIDIObjectType: { first: kMIDIObjectType_Other, marshaler: ValuedEnum.AsMachineSizedSIntMarshaler, ignore: ExternalMask }
-    MIDINotificationMessageID: { first: kMIDIMsgSetupChanged, marshaler: ValuedEnum.AsMachineSizedSIntMarshaler }
-    MIDITransformType: { first: kMIDITransform_None, marshaler: ValuedEnum.AsMachineSizedUIntMarshaler }
-    MIDITransformControlType: { first: kMIDIControlType_7Bit, marshaler: ValuedEnum.AsMachineSizedUIntMarshaler }
+    MIDIObjectType: { first: kMIDIObjectType_Other, ignore: ExternalMask }
+    MIDINotificationMessageID: { first: kMIDIMsgSetupChanged }
+    MIDITransformType: { first: kMIDITransform_None, marshaler: ValuedEnum.AsUnsignedShortMarshaler }
+    MIDITransformControlType: { first: kMIDIControlType_7Bit, marshaler: ValuedEnum.AsUnsignedByteMarshaler }
         
 classes:
     MIDINetworkConnection: # DONE
