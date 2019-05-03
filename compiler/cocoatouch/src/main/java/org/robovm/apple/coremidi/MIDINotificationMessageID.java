@@ -34,16 +34,16 @@ import org.robovm.apple.corefoundation.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
+/*<annotations>*//*</annotations>*/
 public enum /*<name>*/MIDINotificationMessageID/*</name>*/ implements ValuedEnum {
     /*<values>*/
-    SetupChanged(1L),
-    ObjectAdded(2L),
-    ObjectRemoved(3L),
-    PropertyChanged(4L),
-    ThruConnectionsChanged(5L),
-    SerialPortOwnerChanged(6L),
-    IOError(7L);
+    SetupChanged(1),
+    ObjectAdded(2),
+    ObjectRemoved(3),
+    PropertyChanged(4),
+    ThruConnectionsChanged(5),
+    SerialPortOwnerChanged(6),
+    IOError(7);
     /*</values>*/
 
     /*<bind>*/
@@ -51,11 +51,11 @@ public enum /*<name>*/MIDINotificationMessageID/*</name>*/ implements ValuedEnum
     /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
 
-    private final long n;
+    private final int n;
 
-    private /*<name>*/MIDINotificationMessageID/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MIDINotificationMessageID/*</name>*/(int n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MIDINotificationMessageID/*</name>*/ valueOf(long n) {
+    public static /*<name>*/MIDINotificationMessageID/*</name>*/ valueOf(int n) {
         for (/*<name>*/MIDINotificationMessageID/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;

@@ -34,17 +34,17 @@ import org.robovm.apple.corefoundation.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
+/*<annotations>*/@Marshaler(ValuedEnum.AsUnsignedShortMarshaler.class)/*</annotations>*/
 public enum /*<name>*/MIDITransformType/*</name>*/ implements ValuedEnum {
     /*<values>*/
-    None(0L),
-    FilterOut(1L),
-    MapControl(2L),
-    Add(8L),
-    Scale(9L),
-    MinValue(10L),
-    MaxValue(11L),
-    MapValue(12L);
+    None((short) 0),
+    FilterOut((short) 1),
+    MapControl((short) 2),
+    Add((short) 8),
+    Scale((short) 9),
+    MinValue((short) 10),
+    MaxValue((short) 11),
+    MapValue((short) 12);
     /*</values>*/
 
     /*<bind>*/
@@ -52,11 +52,11 @@ public enum /*<name>*/MIDITransformType/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
 
-    private final long n;
+    private final short n;
 
-    private /*<name>*/MIDITransformType/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MIDITransformType/*</name>*/(short n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MIDITransformType/*</name>*/ valueOf(long n) {
+    public static /*<name>*/MIDITransformType/*</name>*/ valueOf(short n) {
         for (/*<name>*/MIDITransformType/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;

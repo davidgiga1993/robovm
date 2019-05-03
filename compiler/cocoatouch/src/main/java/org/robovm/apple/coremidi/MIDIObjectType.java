@@ -34,18 +34,18 @@ import org.robovm.apple.corefoundation.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
+/*<annotations>*//*</annotations>*/
 public enum /*<name>*/MIDIObjectType/*</name>*/ implements ValuedEnum {
     /*<values>*/
-    Other(-1L),
-    Device(0L),
-    Entity(1L),
-    Source(2L),
-    Destination(3L),
-    ExternalDevice(16L),
-    ExternalEntity(17L),
-    ExternalSource(18L),
-    ExternalDestination(19L);
+    Other(-1),
+    Device(0),
+    Entity(1),
+    Source(2),
+    Destination(3),
+    ExternalDevice(16),
+    ExternalEntity(17),
+    ExternalSource(18),
+    ExternalDestination(19);
     /*</values>*/
 
     /*<bind>*/
@@ -53,11 +53,11 @@ public enum /*<name>*/MIDIObjectType/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
 
-    private final long n;
+    private final int n;
 
-    private /*<name>*/MIDIObjectType/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MIDIObjectType/*</name>*/(int n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MIDIObjectType/*</name>*/ valueOf(long n) {
+    public static /*<name>*/MIDIObjectType/*</name>*/ valueOf(int n) {
         for (/*<name>*/MIDIObjectType/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;

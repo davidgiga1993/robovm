@@ -34,15 +34,15 @@ import org.robovm.apple.corefoundation.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
+/*<annotations>*/@Marshaler(ValuedEnum.AsUnsignedByteMarshaler.class)/*</annotations>*/
 public enum /*<name>*/MIDITransformControlType/*</name>*/ implements ValuedEnum {
     /*<values>*/
-    _7Bit(0L),
-    _14Bit(1L),
-    _7BitRPN(2L),
-    _14BitRPN(3L),
-    _7BitNRPN(4L),
-    _14BitNRPN(5L);
+    _7Bit((byte) 0),
+    _14Bit((byte) 1),
+    _7BitRPN((byte) 2),
+    _14BitRPN((byte) 3),
+    _7BitNRPN((byte) 4),
+    _14BitNRPN((byte) 5);
     /*</values>*/
 
     /*<bind>*/
@@ -50,11 +50,11 @@ public enum /*<name>*/MIDITransformControlType/*</name>*/ implements ValuedEnum 
     /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
 
-    private final long n;
+    private final byte n;
 
-    private /*<name>*/MIDITransformControlType/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MIDITransformControlType/*</name>*/(byte n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MIDITransformControlType/*</name>*/ valueOf(long n) {
+    public static /*<name>*/MIDITransformControlType/*</name>*/ valueOf(byte n) {
         for (/*<name>*/MIDITransformControlType/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
